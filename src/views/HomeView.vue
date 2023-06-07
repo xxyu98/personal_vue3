@@ -1,7 +1,8 @@
 <template>
 	<div>HomeView</div>
 	<div>{{ test.count }}</div>
-	<button @click="btn">useTestStore++</button>
+	<div><button @click="btn">useTestStore++</button></div>
+	<t-button @click="btn">tdesign 确定</t-button>
 </template>
 <script setup lang="ts">
 import { useTestStore } from '@/store/modules/test'
