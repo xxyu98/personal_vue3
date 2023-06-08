@@ -25,6 +25,19 @@ export default defineConfig({
 			]
 		})
 	],
+	css: {
+		preprocessorOptions: {
+			less: {
+				modifyVars: {
+					hack: `true; @import (reference) "${resolve(
+						'src/style/variables.less'
+					)}";`
+				},
+				math: 'strict',
+				javascriptEnabled: true
+			}
+		}
+	},
 	resolve: {
 		alias: {
 			'@': resolve(__dirname, './src')
